@@ -1,5 +1,5 @@
 // src/components/Sidebar.jsx
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   FiHome,
   FiMusic,
@@ -8,7 +8,6 @@ import {
   FiHeart,
   FiSettings,
   FiPlus,
-  FiMenu,
   FiChevronLeft,
   FiChevronRight,
 } from "react-icons/fi";
@@ -61,21 +60,20 @@ const Sidebar = ({ isCollapsed, onToggleCollapse }) => {
           justifyContent: isCollapsed ? "center" : "space-between",
         }}
       >
-        {!isCollapsed && (
+        {/* Logo */}
+        {!isCollapsed ? (
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <div
+            <img
+              src="/assets/logo.png"
+              alt="Nebula Music"
               style={{
-                width: "40px",
-                height: "40px",
-                background: "linear-gradient(135deg, #8b5cf6, #d946ef)",
-                borderRadius: "12px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                width: "38px",
+                height: "38px",
+                borderRadius: "10px",
+                objectFit: "cover",
+                boxShadow: "0 0 12px rgba(150,70,255,0.6)",
               }}
-            >
-              <FiMusic size={22} color="#fff" />
-            </div>
+            />
             <span
               style={{
                 fontSize: "22px",
@@ -88,7 +86,21 @@ const Sidebar = ({ isCollapsed, onToggleCollapse }) => {
               Nebula
             </span>
           </div>
+        ) : (
+          <img
+            src="/assets/logo.png"
+            alt="Nebula Music"
+            style={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "10px",
+              objectFit: "cover",
+              boxShadow: "0 0 10px rgba(150,70,255,0.5)",
+            }}
+          />
         )}
+
+        {/* Collapse toggle */}
         <button
           onClick={() => onToggleCollapse(!isCollapsed)}
           style={{
@@ -99,7 +111,11 @@ const Sidebar = ({ isCollapsed, onToggleCollapse }) => {
             padding: "4px",
           }}
         >
-          {isCollapsed ? <FiChevronRight size={20} /> : <FiChevronLeft size={20} />}
+          {isCollapsed ? (
+            <FiChevronRight size={20} />
+          ) : (
+            <FiChevronLeft size={20} />
+          )}
         </button>
       </div>
 
@@ -137,7 +153,7 @@ const Sidebar = ({ isCollapsed, onToggleCollapse }) => {
         ))}
       </div>
 
-      {/* Playlists Section */}
+      {/* Playlists */}
       {!isCollapsed && (
         <div style={{ flex: 1, padding: "0 16px", overflowY: "auto" }}>
           <div

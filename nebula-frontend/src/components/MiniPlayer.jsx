@@ -16,7 +16,6 @@ export default function MiniPlayer({
 }) {
   const backend = "http://127.0.0.1:8000";
 
-  // --- hooks first: never conditionally declare hooks
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -141,13 +140,13 @@ export default function MiniPlayer({
   if (!isVisible || !currentTrack) return null;
 
   // --- shared styles
-  const purple = "#8b5cf6"; // accent
+  const purple = "#8b5cf6"; 
   const glassBg =
     "linear-gradient( to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0.02) )";
   const glassOverlay =
     "radial-gradient(120% 200% at 50% -50%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 40%, rgba(0,0,0,0.25) 100%)";
 
-  // Sample upNext data (replace with actual upNextQueue)
+  // Sample upNext data 
   const sampleUpNext = [
     { title: "The Best Acoustic Cover of Popular Songs", artist: "Acoustic Songs", duration: "3:45", videoId: "1" },
     { title: "Ulla Records", artist: "Video Jukebox", duration: "4:20", videoId: "2" },
@@ -375,7 +374,7 @@ export default function MiniPlayer({
         </div>
       </div>
 
-      {/* EXPANDED OVERLAY - FIXED SIZING */}
+      {/* EXPANDED OVERLAY */}
       {isExpanded && (
         <div
           style={{
@@ -394,7 +393,7 @@ export default function MiniPlayer({
           }}
           onClick={closeExpanded}
         >
-          {/* panel - CONSISTENT SIZE */}
+          {/* panel  */}
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
@@ -460,7 +459,7 @@ export default function MiniPlayer({
                 paddingRight: 10,
               }}
             >
-              {/* Album art with neon ring - PROPERLY CONSTRAINED */}
+              {/* Album art with neon ring */}
               <div
                 style={{
                   display: "flex",
@@ -538,7 +537,7 @@ export default function MiniPlayer({
                 </div>
               </div>
 
-              {/* transport - FIXED ALIGNMENT */}
+              {/* transport */}
               <div style={{ padding: "0 10px" }}>
                 {/* title-row */}
                 <div
@@ -647,7 +646,7 @@ export default function MiniPlayer({
                   </div>
                 </div>
 
-                {/* controls - FIXED ALIGNMENT */}
+                {/* controls  */}
                 <div
                   style={{
                     display: "flex",
@@ -736,7 +735,7 @@ export default function MiniPlayer({
                     justifyContent: "center",
                   }}>
                     <FiVolume2 size={18} />
-                    {/* FIXED VOLUME SLIDER WITH CUSTOM STYLING */}
+                    {/*  VOLUME SLIDER WITH CUSTOM STYLING */}
                     <div
                       style={{
                         position: "relative",
@@ -784,7 +783,7 @@ export default function MiniPlayer({
               </div>
             </div>
 
-            {/* right: UpNext - SIMPLIFIED */}
+            {/* right: UpNext */}
             <div
               style={{
                 background: "rgba(0,0,0,0.2)",

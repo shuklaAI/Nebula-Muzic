@@ -1,4 +1,3 @@
-// src/components/Sidebar.jsx
 import React from "react";
 import {
   FiHome,
@@ -301,7 +300,7 @@ const Sidebar = ({ isCollapsed, onToggleCollapse }) => {
                   fontWeight: 600,
                 }}
               >
-                Shukla AI
+                Your name if your want or u can make it remove properly
               </div>
               <div
                 style={{
@@ -309,7 +308,7 @@ const Sidebar = ({ isCollapsed, onToggleCollapse }) => {
                   fontSize: "12px",
                 }}
               >
-                Premium
+                Premium (if you want)
               </div>
             </div>
           </div>

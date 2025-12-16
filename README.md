@@ -238,3 +238,5 @@ For educational inquiries or portfolio discussions:
 GitHub: @shuklaAI
 
 Portfolio: https://abhiavshukla.vercel.app/
+
+<div align="center"> <sub>Built with ❤️ for educational purposes. Remember to respect copyright and use responsibly.</sub> </div> 

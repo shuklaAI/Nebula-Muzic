@@ -58,17 +58,29 @@ Nebula-Music 🎵
 
 ## 📁 Project Structure
 Nebula-Music/
+
 ├── src/
+
 │ ├── components/
+
 │ │ ├── MiniPlayer.jsx # Main music player component
+
 │ │ ├── Search.jsx # Search interface
+
 │ │ ├── Playlist.jsx # Playlist management
+
 │ │ └── UpNext.jsx # Queue management
+
 │ ├── App.jsx # Main application
+
 │ └── index.js # Entry point
+
 ├── server.py # FastAPI backend
+
 ├── requirements.txt # Python dependencies
+
 ├── package.json # Node.js dependencies
+
 └── README.md # This file
 
 ## 🔧 Installation & Setup
